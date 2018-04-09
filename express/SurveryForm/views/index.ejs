@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        form{
+            margin: 2em;
+        }
+        input, label textarea{
+            display: block;
+            margin-top: 2em;
+            margin-bottom: 1em;
+        }
+        input, select{
+            display: block;
+            margin-top: 2em;
+            margin-bottom: 1em;
+        }
+    </style>
+    <title>Survey Form</title>
+</head>
+<body>
+    <div>
+        <form action="/result" method="post">
+            <label for="name">Your Name: <input type="text" name="name" id="name"></label>
+            <label for="location">Location:
+                <select name="location" id="location">
+                    <option value="seattle">Seattle</option>
+                    <option value="chicago">Chicago</option>
+                    <option value="dallas">Dallas</option>
+                </select>
+            </label>
+            <label for="language">Favorite Language:
+                <select name="language" id="language">
+                    <option value="javascript">Javascript</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                </select>
+            </label>
+            <label for="comment">Comment(optional):
+                <textarea name="comment" id="comment" cols="30" rows="5"></textarea>
+            </label>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
