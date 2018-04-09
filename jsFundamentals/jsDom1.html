@@ -1,0 +1,22 @@
+<html>
+<body>
+    <h1>Students</h1>
+    <ul id="main">
+        <!-- this is empty-->
+    </ul> 
+<script>
+    function superAppend(array, element, id){
+        // finish this function
+        let target = document.getElementById(id);
+        for(item in array){
+            let newElement = document.createElement(element);
+            newElement.innerHTML = array[item];
+            target.appendChild(newElement);
+        }
+    };
+    let students = ["Jeff", "Jenny", "Javier", "Joslyn", "Joe", "Jane", "Django"];
+    let target_id = "main";
+    superAppend(students,"li", target_id);
+</script>   
+</body>
+</html>
