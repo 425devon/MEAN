@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script src="/myjs/myjs.js"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <div id="results">
+
+    </div>
+    <div>
+        <form>
+            <label for="name">Your Name: <input type="text" name="name" id="name"></label>
+            <label for="location">Location:
+                <select name="location" id="location">
+                    <option value="seattle">Seattle</option>
+                    <option value="chicago">Chicago</option>
+                    <option value="dallas">Dallas</option>
+                </select>
+            </label>
+            <label for="language">Favorite Language:
+                <select name="language" id="language">
+                    <option value="javascript">Javascript</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                </select>
+            </label>
+            <label for="comment">Comment(optional):
+                <textarea name="comment" id="comment" cols="30" rows="5"></textarea>
+            </label>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    </div>
+
+</body>
+</html>
