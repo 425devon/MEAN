@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="button" value="mmmclickitymmmclackity" id="b1">
+        <h1 id="hhh">Hey look at me!</h1>
+    </div>
+
+    <script>
+        function $Dojo(eid){
+            let elem = document.getElementById(eid);
+            return {
+                click:function(cb){
+                    elem.addEventListener("click", cb);
+                },
+                hover:function(cb1,cb2){
+                    elem.addEventListener("mouseover", cb1);
+                    elem.addEventListener("mouseout", cb2);
+                }
+            }
+        }
+
+        $Dojo("b1").click(()=>{alert("I was clicked")});
+        $Dojo("hhh").hover(()=>{alert("Ohh Heyyyyyy!")}, ()=>{alert("no! wait come back...")})
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+* {
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 970px;
+    margin-top: 1em;
+    background-color: lightblue;
+}
+
+.images {
+    width: 700px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.pokedex {
+    width: 250px;
+    display: inline-block;
+    padding
+}
+
+#orders {
+    list-style: none;
+}
+
+#orders li {
+    display: inline-block;
+}
+
+.card {
+    width: 225px;
+    height: 430px;
+    margin-top: 1em;
+    display: inline-block;
+    border: 5px solid red;
+    background-color: rgb(255, 145, 0);
+}
+
+h1,h4 {
+    padding-left: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+h3 {
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+.card img{
+text-align: center;
+padding-left: 50px;
+}
+ul h4{
+position: relative;
+left: -95px;
+padding-bottom: 10px;
+}
