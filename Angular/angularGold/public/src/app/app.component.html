@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Total Gold {{ gold }}</h1>
+
+  <div class="box">
+    <h2>Farm</h2>
+    <h3>Earns 2-5 gold</h3>
+    <button (click)="farm()">Farm!</button>
+  </div>
+<div class="box">
+  <h2>Cave</h2>
+  <h3>Earns 5-10 gold</h3>
+  <button (click)="cave()">Cave!</button>
+</div>
+<div class="box">
+  <h2>House</h2>
+  <h3>Earns 7-15 gold</h3>
+  <button (click)="house()">House!</button>
+</div>
+<div class="box">
+  <h2>Casino</h2>
+  <h3>win or loose upto 100 gold</h3>
+  <button (click)="casino()">Casino!</button>
+</div>
+<div id="messages">
+  <ul>
+    <li *ngFor="let msg of log;"><p>{{msg}}</p></li>
+  </ul>
+</div>
+</div>
