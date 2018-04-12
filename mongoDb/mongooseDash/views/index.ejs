@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mongoose Mania!</title>
+</head>
+<body>
+    <div>
+        <a href="/newGoose">Add a new Mongoose!</a>
+        <table>
+            <tr>
+                <th>Name:</th>
+                <th>Age:</th>
+                <th>Favorite Food:</th>
+                <th>Actions:</th>
+            </tr>
+            <% for(var g in gooses){ %>
+                <tr>
+                    <td><a href="/show/<%= gooses[g].id %>"><%=gooses[g].name%></a></td>
+                    <td><%=gooses[g].age%></td>
+                    <td><%=gooses[g].food%></td>
+                    <td><a href="/update/<%= gooses[g].id %>">Update</a> &nbsp;<a href="/destroy/<%= gooses[g].id %>">Remove</a></td>
+            <% } %>
+                </tr>
+        </table>
+    </div>
+</body>
+</html>

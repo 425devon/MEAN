@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "9801a5c2-1db9-44be-a806-42fee03f246d",
+		"name": "Task API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8000/tasks/5acbd54b818c6b560eccf74e",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8000/tasks/5acbd54b818c6b560eccf74e",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"tasks",
+						"5acbd54b818c6b560eccf74e"
+					]
+				},
+				"description": "delete task by id functioning!"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/tasks/5acbcf52d81f7a54b6aaa16a",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t \"title\": \"a newly updated title\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/tasks/5acbcf52d81f7a54b6aaa16a",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"tasks",
+						"5acbcf52d81f7a54b6aaa16a"
+					]
+				},
+				"description": "updating task functioning!"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/tasks",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"task3\",\n\t\"description\" : \"test3\",\n\t\"completed\": true\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"tasks"
+					]
+				},
+				"description": "creating new task functioning!"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8000/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"tasks"
+					]
+				},
+				"description": "showing all tasks functioning!"
+			},
+			"response": []
+		}
+	]
+}

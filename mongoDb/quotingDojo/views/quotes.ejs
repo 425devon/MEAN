@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        ul{
+            list-style: none;
+        }
+    </style>
+    <title>QuotingDojo</title>
+</head>
+<body>
+    <div>
+        <h1>Here are the awesome quotes!</h1>
+    </div>
+    <div>
+        <ul>
+            <% for(var q in allQuotes) { %>
+                <li>" <%= allQuotes[q].quote %> "</li>
+                <li>-<%= allQuotes[q].name %>&nbsp; at &nbsp; <%= allQuotes[q].date %> </li>
+            <% } %>
+        </ul>
+    </div>
+</body>
+</html>

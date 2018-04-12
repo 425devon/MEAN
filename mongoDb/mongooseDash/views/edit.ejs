@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>edit <%= goose.name %></title>
+</head>
+<body>
+    <form action="/edit/<%= goose.id %>" method="POST">
+        <label for="name">Name: <input type="text" name="name" id="name" value="<%=goose.name%>"></label>
+        <label for="age">Age: <input type="text" name="age" id="age" value="<%=goose.age%>"></label>
+        <label for="food">Favorite Food: <input type="text" name="food" id="food" value="<%=goose.food%>"></label>
+        <input type="submit" value="Apply Changes">
+    </form>
+</body>
+</html>
