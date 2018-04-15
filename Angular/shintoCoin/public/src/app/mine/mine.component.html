@@ -1,0 +1,9 @@
+<div>
+  <h2>Mine ShintoCoins</h2>
+  <h3>Question: {{[(questions[0][0])]}}</h3>
+  <form (submit)="answerQuestion(ans.value)">
+    <input #ans>
+    <input type="submit" value="Mine!">
+  </form>
+  <h1>{{[(msg)]}}</h1>
+</div>

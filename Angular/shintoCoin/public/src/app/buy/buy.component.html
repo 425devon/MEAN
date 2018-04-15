@@ -1,0 +1,10 @@
+<div>
+  <h1>Buy ShintoCoins</h1>
+  <h3>Current ShintoCoin Value: ${{[(value)]}}.00</h3>
+  <h3>Number of ShintoCoins Owned: {{[(coins)]}}</h3>
+
+  <form (submit)="buyCoins(num.value)">
+    <input #num>
+    <input type="submit" value="buy">
+  </form>
+</div>

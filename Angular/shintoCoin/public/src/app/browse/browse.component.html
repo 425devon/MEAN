@@ -1,0 +1,14 @@
+<div>
+  <table>
+    <tr><th>Action</th><th>Amount</th><th>value</th><th></th></tr>
+    <tr *ngFor="let item of ledger">
+      <td>{{item.action}}</td>
+      <td>{{item.amount}}</td>
+      <td>{{item.value}}</td>
+      <td><button (click)="makeCur(item)">Details</button></td>
+    </tr>
+  </table>
+</div>
+<div>
+  <app-details [curDetail]="detail"></app-details>
+</div> 
