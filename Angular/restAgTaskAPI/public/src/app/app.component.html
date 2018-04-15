@@ -1,0 +1,43 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+
+<!-- <button (click)="getTasksFromService()" >Click to get all tasks</button>
+<ul>
+  <li *ngFor="let task of tasks;">
+    <h2>Title: {{ task.title }} &nbsp; Desc: {{ task.description }} &nbsp; completed: {{ task.completed }}</h2>
+  </li>
+</ul> -->
+  <div id="create">
+      <form (submit)="onSubmit()" id="newT">
+          <!-- use the json pipe to see how newTask changes in real time -->
+          <!-- <p> {{ newTask | json }} </p> -->
+          <label for="newTask.title">Title: <input type="text" name="newTask.title" [(ngModel)]="newTask.title" /></label>
+          <label for="newTask.description">Description: <input type="text" name="newTask.description" [(ngModel)]="newTask.description" /></label>
+          <input type="submit" value="Create Task" id="sub"/>
+      </form>
+  </div>
+  <div id="table">
+    <table>
+      <tr><th>Title</th><th>Description</th><th>Status</th><th>Actions</th></tr>
+      <tr *ngFor="let task of tasks;trackBy: trackByFn">
+        <td>{{task.title}}</td>
+        <td>{{task.description}}</td>
+        <td>{{task.completed}}</td>
+        <td>
+          <button class="tb">Edit</button>
+          <button class="tb" (click)="markComplete(task._id)">Mark completed</button>
+          <button class="tb" (click)="removeTask(task._id)">Delete</button>
+        </td>
+      </tr>
+    </table>
+    <button (click)="getTasksFromService()">Refresh Tasks</button>
+  </div>
+  <div>
+    <form>
+    </form>
+  </div>
+</div>
+

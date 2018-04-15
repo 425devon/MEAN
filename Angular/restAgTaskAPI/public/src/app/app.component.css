@@ -1,0 +1,44 @@
+*{
+    font-family: sans-serif;
+}
+ul{
+    list-style: none;
+}
+#newT{
+    border: 1px solid black;
+}
+label, input{
+    display: block;
+    margin: 1em;
+    text-align: left;
+}
+#sub{
+    margin-left: 30%;
+}
+#table{
+    border: 1px solid black;
+    width: 60%;
+    display: inline-block;
+    vertical-align: top;
+}
+#create{
+    display: inline-block;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.tb{
+    margin-left: 1%;
+}
