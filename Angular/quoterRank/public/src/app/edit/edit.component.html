@@ -1,0 +1,11 @@
+<div>
+  <a routerLink="/home" routerLinkActive="active">Home</a>
+  <h3>Edit this author:</h3>
+  <div>
+    <form (submit)="editAuthor()">
+      <input type="text" name="author.name" placeholder="author" [(ngModel)]="author.name" />
+      <input type="submit" value="Edit Author" />
+    </form>
+    {{msg}}
+  </div>
+</div>

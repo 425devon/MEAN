@@ -1,0 +1,11 @@
+<div>
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+  <h3>Add a new author:</h3>
+  <div>
+    <form (submit)="createAuthor()">
+      <input type="text" name="newAuthor.name" [(ngModel)]="newAuthor.name" />
+      <input type="submit" value="Add Author" />
+    </form>
+    {{msg}}
+  </div>
+</div>
