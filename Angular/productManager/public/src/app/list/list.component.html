@@ -1,0 +1,13 @@
+<div>
+  <ul>
+    <li *ngFor="let i of products; let n = index">
+      <div class="box">
+        <img src="{{i.url}}" />
+        <h3>{{i.title}}</h3>
+        <h3>{{i.price}}</h3>
+        <button [routerLink]="['/edit', i._id]">Edit</button>
+        <button (click)="delete(n, i._id)">Delete</button>
+      </div>
+    </li>
+  </ul>
+</div>

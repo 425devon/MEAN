@@ -1,0 +1,20 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+
+<button (click)="getTasksFromService()" >Click to get all tasks</button>
+<ul>
+  <li *ngFor="let task of tasks;">
+    <h2>Title: {{ task.title }} &nbsp; Desc: {{ task.description }} &nbsp; completed: {{ task.completed }}</h2>
+  </li>
+</ul>
+  <label for="id">Or Find Task By Id: 
+    <select>
+      <option *ngFor="let x of taskId;" value="{{x}}" name="id">{{x}}</option>
+    </select>
+  </label>
+  <button (click)="findTaskByid($event)">Click to search</button>
+</div>
+

@@ -1,0 +1,10 @@
+<div class="container">
+    {{ product | json }}
+  <form (submit)="onSubmit">
+      Title: <input type="text" name="product.title" [(ngModel)]="product.title" />
+      Price: <input type="text" name="product.price" [(ngModel)]="product.price" />
+      Url: <input type="text" name="product.url" [(ngModel)]="product.url" />
+      <input type="submit" value="edit product">
+  </form>
+
+</div>

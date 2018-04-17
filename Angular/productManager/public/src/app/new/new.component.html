@@ -1,0 +1,26 @@
+<div class="container">
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <form (submit)="onSubmit()" #formData='ngForm'>
+      title:
+      <input type="text" name="title" 
+        required
+        minlength="4"
+        maxlength="30"
+        [(ngModel)] ='product.title'
+        #title="ngModel"
+      />
+      price:
+      <input type="text" name="price" 
+      required
+      [(ngModel)] = 'product.price'
+      #price="ngModel"
+      />
+      image url:
+      <input type="text" name="url" 
+      [(ngModel)] = 'product.url'
+      #url="ngModel"
+      />
+      <input type="submit" value="Add Product">
+      <div *ngIf="!formData.valid">{{ formData.errors | json }}</div>
+    </form>
+</div>
