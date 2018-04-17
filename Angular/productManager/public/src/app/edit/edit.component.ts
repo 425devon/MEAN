@@ -8,6 +8,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 })
 export class EditComponent implements OnInit {
   id:any;
+  msg: any;
   product: {
     _id: String,
     title: String,
@@ -27,6 +28,17 @@ export class EditComponent implements OnInit {
   }
   onSubmit(){
     console.log(this.product);
+    let O = this._httpService.editProduct(this.product._id, this.product);
+    O.subscribe(data =>{
+      if(data['message'] == "Error"){
+        this.msg = data['Error']
+      }else{
+        this.goHome();
+      }
+    })
+  }
+  goHome() {
+    this._router.navigate(['/list']);
   }
 
 }
